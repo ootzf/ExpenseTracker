@@ -3,9 +3,10 @@ Add and track your expenses so far
 
 # Prerequisite
 
-Xcode 12.5.1
-CocoaPods on your machine
-Device with minimum iOS 12.3(or use Simulator)
+- Xcode 12.5.1
+- CocoaPods installed on your machine
+- Device with minimum iOS 12.3(or use Simulator)
+
 
 # Instructions
 
