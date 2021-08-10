@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hru-aY-sTH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="uyd-EW-U72">
+            <objects>
+                <navigationController id="Hru-aY-sTH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="XKk-ke-3ds">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SyN-Uq-Ga0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7u5-TT-pfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-894" y="94"/>
+        </scene>
+        <!--Expense-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LandingPageViewController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVI-KW-BI1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No expenses yet! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL5-Y9-Wkg">
+                                        <rect key="frame" x="139" y="377" width="136" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pL5-Y9-Wkg" firstAttribute="centerX" secondItem="BVI-KW-BI1" secondAttribute="centerX" id="JdD-rh-07i"/>
+                                    <constraint firstItem="pL5-Y9-Wkg" firstAttribute="centerY" secondItem="BVI-KW-BI1" secondAttribute="centerY" id="Tzp-jg-UR9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSR-KJ-QsE" customClass="RoundButton" customModule="ExpenseTracker" customModuleProvider="target">
+                                <rect key="frame" x="354" y="714" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dSR-KJ-QsE" secondAttribute="height" multiplier="1:1" id="06l-00-Qgv"/>
+                                    <constraint firstAttribute="height" constant="50" id="2ST-8o-ojr"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="didTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u37-kH-DLI"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="JVR-jf-Pez">
+                                <rect key="frame" x="0.0" y="20" width="414" height="644"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fsr-bV-EQC" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Rpm-Nk-0db"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YtI-hE-evs">
+                                        <rect key="frame" x="0.0" y="250" width="414" height="394"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JVR-jf-Pez" secondAttribute="trailing" id="12p-iR-oyr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BVI-KW-BI1" secondAttribute="trailing" id="Bi9-5m-750"/>
+                            <constraint firstItem="BVI-KW-BI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CsD-GJ-KSu"/>
+                            <constraint firstItem="dSR-KJ-QsE" firstAttribute="top" secondItem="JVR-jf-Pez" secondAttribute="bottom" constant="50" id="RKB-uC-Fi0"/>
+                            <constraint firstItem="BVI-KW-BI1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aK1-7m-iDo"/>
+                            <constraint firstItem="JVR-jf-Pez" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cMO-Hi-rE8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dSR-KJ-QsE" secondAttribute="trailing" constant="10" id="mN8-2o-kn5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dSR-KJ-QsE" secondAttribute="bottom" constant="10" id="qhH-eK-nlK"/>
+                            <constraint firstItem="JVR-jf-Pez" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="vU6-UR-Kvc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BVI-KW-BI1" secondAttribute="bottom" id="xeI-p7-dKD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Expense" id="R3c-U5-cq0"/>
+                    <connections>
+                        <outlet property="addButton" destination="dSR-KJ-QsE" id="GDR-IY-jRO"/>
+                        <outlet property="expenseStackView" destination="JVR-jf-Pez" id="Uxx-PN-qt6"/>
+                        <outlet property="noExpenseView" destination="BVI-KW-BI1" id="h44-Iq-u1L"/>
+                        <outlet property="pieChart" destination="Fsr-bV-EQC" id="fTN-7e-u8C"/>
+                        <outlet property="tableView" destination="YtI-hE-evs" id="68V-4S-Gpm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78.260869565217391" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
