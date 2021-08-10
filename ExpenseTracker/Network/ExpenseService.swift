@@ -25,6 +25,12 @@ class ExpenseService: ExpenseServiceProtocol {
       ]
     var manager: Alamofire.Session!
     
+    /* init() {
+     let trustM = ServerTrustManager(allHostsMustBeEvaluated: false, evaluators: ["": DisabledTrustEvaluator()])
+     let configuration = URLSessionConfiguration.af.default
+     manager = Alamofire.Session(configuration: configuration, serverTrustManager: trustM)
+ }**/
+    
     func getExpenses(handler: @escaping (APIResult) -> Void) {
         let url = Endpoint.getExpenses.url
         manager.request(url, method: .get, parameters: [:], encoding: JSONEncoding(options: []), headers: nil).validate().responseDecodable(of: ExpenseListResponse.self, decoder: JSONDecoder()) { (response) in
