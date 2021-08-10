@@ -24,7 +24,7 @@ Add Expense
 Delete Expense
 1. At one of your expense, swipe left to reveal the delete button
 
-![IMG_0011](/uploads/bd8f6200235c580f3a4c799642f41b72/IMG_0011.jpeg)
+![Screen_Shot_2021-08-10_at_12.20.08_PM](/uploads/094126ef7702154984e0da58b43aeada/Screen_Shot_2021-08-10_at_12.20.08_PM.png)
 
 2. Click on it to delete the expense
 3. The changes should be reflected immediately
