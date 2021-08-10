@@ -12,7 +12,8 @@ Device with minimum iOS 12.3(or use Simulator)
 1. Git Pull the project to your local repository
 2. Open terminal at your local repository's folder
 3. run "pod install" to install all the dependencies the project have
-4. Run the project
+4. Open the file with extension "*.xcworkspace" to open the project with cocoapods dependencies
+5. Run the project
 
 # Features
 
